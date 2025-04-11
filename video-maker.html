@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tool to convert images to videos with customizable settings. Create videos from your photos with transitions, effects, and music.">
+    <meta name="keywords" content="image to video, photo to video converter, online video maker, free video creator">
+    <meta name="author" content="ImageToVideo Pro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Image to Video Generator | Free Online Tool">
+    <meta property="og:description" content="Convert your images to professional videos with our free online tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/preview.jpg">
+    
+    <title>Image to Video Generator | Free Online Tool</title>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Image to Video Generator",
+      "url": "https://yourwebsite.com",
+      "description": "Free online tool to convert images to videos with customizable settings.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com" />
+    
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #ea4335;
+            --light-color: #f8f9fa;
+            --dark-color: #202124;
+            --gray-color: #5f6368;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .ad-banner {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem auto;
+            max-width: 1200px;
+            border-radius: var(--border-radius);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .tool-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .upload-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .settings-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .drop-area {
+            border: 2px dashed var(--gray-color);
+            border-radius: var(--border-radius);
+            padding: 3rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+        }
+        
+        .drop-area:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(66, 133, 244, 0.05);
+        }
+        
+        .drop-area i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .drop-area p {
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: #3367d6;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--gray-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #4d5156;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #d33426;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+        }
+        
+        .range-slider {
+            width: 100%;
+        }
+        
+        .range-slider input[type="range"] {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            background: #ddd;
+            border-radius: 4px;
+            outline: none;
+            margin: 1rem 0;
+        }
+        
+        .range-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -0.5rem;
+        }
+        
+        .range-labels span {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        .preview-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .preview-video {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .download-section {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .ad-sidebar {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #bdc1c6;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #3c4043;
+        }
+        
+        @media (max-width: 992px) {
+            .tool-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .ad-sidebar {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            main {
+                padding: 0 1rem;
+            }
+            
+            .upload-section,
+            .settings-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 2rem auto;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Security badge */
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+        }
+        
+        .security-badge i {
+            margin-right: 0.3rem;
+        }
+    </style>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">ImageToVideo Pro</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Top Ad Banner -->
+    <div class="ad-banner">
+        <!-- Replace with your Google AdSense code -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+        crossorigin="anonymous"></script>
+        <!-- Ad Unit 1 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+             data-ad-slot="YOUR_AD_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Convert Images to Videos in Seconds <span class="security-badge"><i class="fas fa-lock"></i> Secure</span></h1>
+            <p>Transform your photos into stunning videos with our free online tool. Customize transitions, add music, and create professional videos without any watermark.</p>
+            <a href="#tool" class="btn btn-accent">Start Creating Now</a>
+        </section>
+        
+        <!-- Sidebar Ad -->
+        <div class="ad-sidebar">
+            <!-- Vertical Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+            crossorigin="anonymous"></script>
+            <!-- Ad Unit 2 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- Main Tool Section -->
+        <section id="tool">
+            <div class="tool-container">
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <h2 class="section-title">Upload Images</h2>
+                    <div class="drop-area" id="dropArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & Drop your images here</p>
+                        <p>or</p>
+                        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                        <button class="btn" id="selectFilesBtn">Select Files</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageOrder">Image Order:</label>
+                        <select id="imageOrder">
+                            <option value="original">Original Order</option>
+                            <option value="random">Random</option>
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="date">Date Modified</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="transitionType">Transition Effect:</label>
+                        <select id="transitionType">
+                            <option value="fade">Fade</option>
+                            <option value="slide">Slide</option>
+                            <option value="zoom">Zoom</option>
+                            <option value="rotate">Rotate</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Settings Section -->
+                <div class="settings-section">
+                    <h2 class="section-title">Video Settings</h2>
+                    <div class="form-group">
+                        <label for="videoResolution">Resolution:</label>
+                        <select id="videoResolution">
+                            <option value="1080">1080p (Full HD)</option>
+                            <option value="720">720p (HD)</option>
+                            <option value="480">480p (SD)</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="customResolutionGroup" style="display: none;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label for="customWidth">Width (px):</label>
+                                <input type="number" id="customWidth" min="100" max="3840" value="1920">
+                            </div>
+                            <div>
+                                <label for="customHeight">Height (px):</label>
+                                <input type="number" id="customHeight" min="100" max="2160" value="1080">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="videoFormat">Output Format:</label>
+                        <select id="videoFormat">
+                            <option value="mp4">MP4 (Recommended)</option>
+                            <option value="webm">WebM</option>
+                            <option value="mov">MOV</option>
+                            <option value="avi">AVI</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="videoDuration">Video Duration (seconds):</label>
+                        <input type="number" id="videoDuration" min="5" max="600" value="30">
+                    </div>
+                    <div class="form-group">
+                        <label for="makingLevel">Making Level:</label>
+                        <div class="range-slider">
+                            <input type="range" id="makingLevel" min="1" max="5" value="3" step="1">
+                            <div class="range-labels">
+                                <span>Basic</span>
+                                <span>Simple</span>
+                                <span>Standard</span>
+                                <span>Advanced</span>
+                                <span>Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="musicOption">Add Background Music:</label>
+                        <select id="musicOption">
+                            <option value="none">No Music</option>
+                            <option value="upload">Upload Music</option>
+                            <option value="library">From Library</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="musicUploadGroup" style="display: none;">
+                        <input type="file" id="musicFile" accept="audio/*" style="display: none;">
+                        <button class="btn btn-secondary" id="uploadMusicBtn">Select Music File</button>
+                    </div>
+                    <button class="btn btn-accent" id="generateVideoBtn" style="width: 100%; padding: 1rem;">
+                        <i class="fas fa-magic"></i> Generate Video
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Preview Section -->
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <h2 class="section-title">Video Preview</h2>
+                <div class="spinner" id="loadingSpinner"></div>
+                <video controls class="preview-video" id="previewVideo" style="display: none;"></video>
+                <div class="download-section" id="downloadSection" style="display: none;">
+                    <p>Your video is ready! Click below to download.</p>
+                    <button class="btn btn-accent" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download Video
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Fast Processing</h3>
+                <p>Our optimized algorithms process your videos quickly without compromising quality, even for large files.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Private</h3>
+                <p>Your files are processed in your browser and never uploaded to our servers, ensuring complete privacy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3>Advanced Controls</h3>
+                <p>Customize every aspect of your video with our comprehensive settings and professional-grade options.</p>
+            </div>
+        </section>
+        
+        <!-- Bottom Ad Banner -->
+        <div class="ad-banner">
+            <!-- Bottom Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+            crossorigin="anonymous"></script>
+            <!-- Ad Unit 3 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>ImageToVideo Pro</h3>
+                <p>The easiest way to convert your images to professional videos online. Free to use with no watermarks.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 ImageToVideo Pro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('active');
+        });
+        
+        // File upload handling
+        const dropArea = document.getElementById('dropArea');
+        const fileInput = document.getElementById('fileInput');
+        const selectFilesBtn = document.getElementById('selectFilesBtn');
+        
+        // Prevent default drag behaviors
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        // Highlight drop area when item is dragged over it
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        // Handle dropped files
+        dropArea.addEventListener('drop', handleDrop, false);
+        
+        // Handle file selection via button
+        selectFilesBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', handleFiles, false);
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        function highlight() {
+            dropArea.style.borderColor = '#4285f4';
+            dropArea.style.backgroundColor = 'rgba(66, 133, 244, 0.1)';
+        }
+        
+        function unhighlight() {
+            dropArea.style.borderColor = '#5f6368';
+            dropArea.style.backgroundColor = '';
+        }
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles({ target: { files } });
+        }
+        
+        function handleFiles(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                // Process the files (in a real app, you would display previews)
+                console.log('Files selected:', files);
+                dropArea.querySelector('p').textContent = `${files.length} file(s) selected`;
+            }
+        }
+        
+        // Custom resolution toggle
+        const videoResolution = document.getElementById('videoResolution');
+        const customResolutionGroup = document.getElementById('customResolutionGroup');
+        
+        videoResolution.addEventListener('change', function() {
+            if (this.value === 'custom') {
+                customResolutionGroup.style.display = 'block';
+            } else {
+                customResolutionGroup.style.display = 'none';
+            }
+        });
+        
+        // Music upload toggle
+        const musicOption = document.getElementById('musicOption');
+        const musicUploadGroup = document.getElementById('musicUploadGroup');
+        const uploadMusicBtn = document.getElementById('uploadMusicBtn');
+        const musicFile = document.getElementById('musicFile');
+        
+        musicOption.addEventListener('change', function() {
+            if (this.value === 'upload') {
+                musicUploadGroup.style.display = 'block';
+            } else {
+                musicUploadGroup.style.display = 'none';
+            }
+        });
+        
+        uploadMusicBtn.addEventListener('click', () => {
+            musicFile.click();
+        });
+        
+        musicFile.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                uploadMusicBtn.textContent = this.files[0].name;
+            }
+        });
+        
+        // Generate video button
+        const generateVideoBtn = document.getElementById('generateVideoBtn');
+        const previewContainer = document.getElementById('previewContainer');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const previewVideo = document.getElementById('previewVideo');
+        const downloadSection = document.getElementById('downloadSection');
+        
+        generateVideoBtn.addEventListener('click', function() {
+            // Show loading spinner
+            loadingSpinner.style.display = 'block';
+            previewVideo.style.display = 'none';
+            downloadSection.style.display = 'none';
+            previewContainer.style.display = 'block';
+            
+            // Simulate video generation (in a real app, this would use a video generation library)
+            setTimeout(() => {
+                loadingSpinner.style.display = 'none';
+                previewVideo.style.display = 'block';
+                downloadSection.style.display = 'block';
+                
+                // In a real implementation, you would set the video source here
+                // previewVideo.src = URL.createObjectURL(generatedVideoBlob);
+                
+                // For demo purposes, we'll just show a message
+                previewVideo.innerHTML = `
+                    <source src="#" type="video/mp4">
+                    Your browser does not support the video tag.
+                `;
+            }, 3000);
+        });
+        
+        // Download button
+        const downloadBtn = document.getElementById('downloadBtn');
+        
+        downloadBtn.addEventListener('click', function() {
+            // In a real implementation, this would trigger the download of the generated video
+            alert('In a real implementation, this would download your video. This is just a demo.');
+        });
+        
+        // Making level indicator
+        const makingLevel = document.getElementById('makingLevel');
+        makingLevel.addEventListener('input', function() {
+            const labels = document.querySelectorAll('.range-labels span');
+            labels.forEach((label, index) => {
+                if (index === parseInt(this.value) - 1) {
+                    label.style.color = '#4285f4';
+                    label.style.fontWeight = 'bold';
+                } else {
+                    label.style.color = '#5f6368';
+                    label.style.fontWeight = 'normal';
+                }
+            });
+            
+            // Adjust settings based on making level
+            adjustSettingsForMakingLevel(this.value);
+        });
+        
+        function adjustSettingsForMakingLevel(level) {
+            // In a real app, you would adjust various settings based on the making level
+            console.log(`Adjusting settings for making level: ${level}`);
+            
+            // Example adjustments:
+            const transitionType = document.getElementById('transitionType');
+            const videoDuration = document.getElementById('videoDuration');
+            
+            switch(level) {
+                case '1': // Basic
+                    transitionType.value = 'none';
+                    videoDuration.value = 15;
+                    break;
+                case '2': // Simple
+                    transitionType.value = 'fade';
+                    videoDuration.value = 20;
+                    break;
+                case '3': // Standard
+                    transitionType.value = 'slide';
+                    videoDuration.value = 30;
+                    break;
+                case '4': // Advanced
+                    transitionType.value = 'zoom';
+                    videoDuration.value = 45;
+                    break;
+                case '5': // Pro
+                    transitionType.value = 'rotate';
+                    videoDuration.value = 60;
+                    break;
+            }
+        }
+        
+        // Initialize making level display
+        makingLevel.dispatchEvent(new Event('input'));
+        
+        // Service Worker Registration for PWA and offline functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('ServiceWorker registration successful');
+                }).catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+        
+        // Performance optimization - lazy loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyElements = [].slice.call(document.querySelectorAll('.lazy'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyElementObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyElement = entry.target;
+                            // Handle lazy loading
+                            observer.unobserve(lazyElement);
+                        }
+                    });
+                });
+                
+                lazyElements.forEach(function(lazyElement) {
+                    lazyElementObserver.observe(lazyElement);
+                });
+            }
+        });
+    </script>
+    
+    <!-- Security headers would be configured on the server side -->
+    <!-- For performance, consider adding preload for critical resources -->
+</body>
+</html>
